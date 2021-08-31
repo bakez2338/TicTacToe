@@ -91,8 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     winnerString = getString(R.string.oWin);
                 }
-                // Send to new view
-                showPlayerWinScreen(winnerString);
                 // Update status bar
                 TextView status = findViewById(R.id.status);
                 status.setText(winnerString);
@@ -130,11 +128,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-
-    private void showPlayerWinScreen(String winner) {
-        setContentView(R.layout.winner);
-        TextView winnerString = findViewById(R.id.winnerTextView);
-        winnerString.setText(winner);
     }
 }
